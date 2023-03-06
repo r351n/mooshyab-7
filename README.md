@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/readme/exe.png" alt="Logo" width="800" height="800">
+    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/readme/exe.png" alt="Logo">
   </a>
 </div>
 
