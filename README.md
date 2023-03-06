@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://t.me/c/1162722999/21956">
-    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/exe.png" alt="Logo">
+    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/exe.png" alt="CLI">
   </a>
 </div>
 
@@ -27,6 +27,11 @@ python3 mooshyab7.py
 ```
 
 _For more information, please refer to the [Documentation](https://t.me/c/1162722999/21956)_
+<div align="center">
+  <a href="https://t.me/c/1162722999/21956">
+    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/out.png" alt="Output">
+  </a>
+</div>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
