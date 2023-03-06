@@ -60,6 +60,12 @@ The tool allows you to search for a single ID or a range of IDs and saves the re
 
 3. Follow the prompts to search for an ID or a range of IDs.
 
+- output.csv will be created in the project directory.
+<p align="center">
+    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/out.png" alt="Demo">
+</p>
+
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome! Feel free to check the [issues page](https://github.com/r351n/mooshyab-7/issues).
