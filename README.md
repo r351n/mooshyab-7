@@ -1,62 +1,74 @@
 
-# Mooshyab 7 👋🏼
-### Webamooz
 
-<!-- ![img](https://raw.githubusercontent.com/r351n/mooshyab-7/main/readme/exe.png) -->
+<h1 align="center">🔍 Mooshyab 7 - Farabiran ID Searcher 🔍</h1>
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
+<p align="center">
+    <img src="https://img.shields.io/github/license/r351n/mooshyab-7" alt="License">
+    <img src="https://img.shields.io/github/repo-size/r351n/mooshyab-7" alt="Repo Size">
+    <img src="https://img.shields.io/github/last-commit/r351n/mooshyab-7" alt="Last Commit">
+</p>
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://t.me/c/1162722999/21956">
-    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/exe.png" alt="CLI">
-  </a>
-</div>
+<p align="center">
+    <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
+</p>
 
+<p align="center">
+    <img src="https://forthebadge.com/images/badges/made-with-python.svg" alt="Made with Python">
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with Love">
+    <!-- <img src="https://forthebadge.com/images/badges/makes-people-smile.svg" alt="Makes People Smile"> -->
+</p>
 
+<p align="center">
+    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/exe.png" alt="Demo">
+</p>
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## 📖 Description
 
-Usage examples are given below. Run the following commands in the terminal:
+Farabiran ID Searcher is a CLI tool for searching Iranian National IDs from the Farabiran website.
 
-```   
-python3 mooshyab7.py
-```
+The tool allows you to search for a single ID or a range of IDs and saves the results to a CSV file.
 
-_For more information, please refer to the [Documentation](https://t.me/c/1162722999/21956)_
+## 🚀 Getting Started
 
-### Output.csv #0-10000 _(Partial)_
+### Prerequisites
 
-<div align="center">
-  <a href="https://t.me/c/1162722999/21956">
-    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/out.png" alt="Output">
-  </a>
-</div>
+* Python 3.7 or higher
 
+### Installation
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Clone the repo:
+    ```
+    git clone https://github.com/r351n/mooshyab-7.git
+    ```
 
+2. Install the dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
 
+### Usage
 
-<!-- ROADMAP -->
-## Roadmap
+1. Navigate to the project directory:
+    ```
+    cd mooshyab-7
+    ```
 
-- [x] Optimize connectivity
-- [x] Optimize speed
-- [x] Cocurrent requests 
-- [ ] Fix bugs
-- [ ] Add more features
+2. Run the script:
+    ```
+    python mooshyab7.py
+    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+3. Follow the prompts to search for an ID or a range of IDs.
 
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome! Feel free to check the [issues page](https://github.com/r351n/mooshyab-7/issues).
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <!-- CONTACT -->
 ## Contact
 
 Telegram - [@webamooz](https://t.me/c/1162722999/21956)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
