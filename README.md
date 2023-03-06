@@ -44,7 +44,7 @@ _For more information, please refer to the [Documentation](https://t.me/c/116272
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Optimize code
+- [x] Optimize connectivity
 - [x] Optimize speed
 - [x] Cocurrent requests 
 - [ ] Fix bugs
