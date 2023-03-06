@@ -9,8 +9,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/readme/exe.png" alt="Logo">
+  <a href="https://t.me/c/1162722999/21956">
+    <img src="https://raw.githubusercontent.com/r351n/mooshyab-7/main/exe.png" alt="Logo">
   </a>
 </div>
 
