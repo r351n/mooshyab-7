@@ -1,5 +1,6 @@
 
-# Webamooz __ Mooshyab 7 👋🏼
+# Mooshyab 7 👋🏼
+### Webamooz
 
 <!-- ![img](https://raw.githubusercontent.com/r351n/mooshyab-7/main/readme/exe.png) -->
 
