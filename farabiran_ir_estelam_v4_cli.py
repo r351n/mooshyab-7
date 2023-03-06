@@ -5,6 +5,7 @@ import jsonlines
 import requests
 import multiprocessing
 from art import text2art
+from termcolor import colored
 
 
 URL = "https://farabiran.ir/Estelam?handler=Search&id={}"
@@ -58,6 +59,11 @@ def search_single_id():
     else: 
         os.remove(f"{id_num}.jsonl")
 
+    exit_program = input("Exit program? (y/n): ")
+    if exit_program.lower() == "y":
+        print("Exiting ID Searcher...")
+        exit()
+
 def search_id_range():
     start = int(input("Enter the starting ID for the range: "))
     end = int(input("Enter the ending ID for the range: "))
@@ -90,8 +96,17 @@ def search_id_range():
     else:
         os.remove(f"{start}-{end}.jsonl")
 
+    exit_program = input("Exit program? (y/n): ")
+    if exit_program.lower() == "y":
+        print("Exiting ID Searcher...")
+        exit()
+
 def main():
-    print(text2art("Mooshyab 7", font="small"))
+    # print(text2art("Mooshyab 7", font="small"))
+    title = "Mooshyab 7"
+    ascii_title = text2art(title, font='small', chr_ignore=True)
+    colored_title = colored(ascii_title, 'cyan', attrs=['bold', 'underline'])
+    print(colored_title)
     print("Welcome to Farabiran ID Searcher CLI v1.0\n")
     while True:
         print("\n\033[1;33mWhat would you like to do?\033[0m\n")
