@@ -21,7 +21,7 @@
 
 ## 📖 Description
 
-Farabiran ID Searcher is a CLI tool for searching Iranian National IDs from the Farabiran website.
+Farabiran ID Searcher is a CLI tool for searching Farabi Cert IDs from the Farabiran website.
 
 The tool allows you to search for a single ID or a range of IDs and saves the results to a CSV file.
 
