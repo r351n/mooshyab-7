@@ -3,13 +3,10 @@
 <h1 align="center">🔍 Mooshyab 7 - Farabiran ID Searcher 🔍</h1>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/r351n/mooshyab-7" alt="License">
     <img src="https://img.shields.io/github/repo-size/r351n/mooshyab-7" alt="Repo Size">
     <img src="https://img.shields.io/github/last-commit/r351n/mooshyab-7" alt="Last Commit">
-</p>
-
-<p align="center">
     <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg" alt="Made with Python">
+
 </p>
 
 <p align="center">
