@@ -28,73 +28,48 @@ def send_request(id_num):
         print(f"ID {id_num} not found.")
 
 
-def search_single_id():
-    id_num = input("Enter the ID you want to search for: ")
-    with multiprocessing.Pool() as pool:
-        with SESSION as session, \
-             jsonlines.open(f"{id_num}.jsonl", mode="w") as writer:
-            # Set session object for each worker process
-            pool.map_async(session.mount, [URL]*len(pool._pool))
-
-            # Use imap_unordered to process results as soon as they become available
-            for result in pool.imap_unordered(send_request, range(int(id_num), int(id_num)+1)):
-                if result is not None:
-                    writer.write(json.loads(result))
-
-    save_file = input("Save to file? (y/n): ")
-    if save_file.lower() == "y":
-        with open(f"{id_num}.csv", "w", newline="", encoding="utf-8") as f, \
-            jsonlines.open(f"{id_num}.jsonl", "r") as reader:
-            data = list(reader)
-            fieldnames = set()
-            for obj in data:
-                fieldnames.update(obj.keys())
-
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(data)
-
-        os.remove(f"{id_num}.jsonl")
-        print(f"File saved successfully in {id_num}.csv")
-    else: 
-        os.remove(f"{id_num}.jsonl")
-
-    exit_program = input("Exit program? (y/n): ")
-    if exit_program.lower() == "y":
-        print("Exiting ID Searcher...")
-        exit()
-
-def search_id_range():
-    start = int(input("Enter the starting ID for the range: "))
-    end = int(input("Enter the ending ID for the range: "))
-    with multiprocessing.Pool() as pool:
-        with SESSION as session, \
-             jsonlines.open(f"{start}-{end}.jsonl", mode="w") as writer:
-            # Set session object for each worker process
-            pool.map_async(session.mount, [URL]*len(pool._pool))
-
-            # Use imap_unordered to process results as soon as they become available
-            for result in pool.imap_unordered(send_request, range(start, end)):
-                if result is not None:
-                    writer.write(json.loads(result))
-
-    save_file = input("Save to file? (y/n): ")
-    if save_file.lower() == "y":
-        with open(f"{start}-{end}.csv", "w", newline="", encoding="utf-8") as f, \
-            jsonlines.open(f"{start}-{end}.jsonl", "r") as reader:
-            data = list(reader)
-            fieldnames = set()
-            for obj in data:
-                fieldnames.update(obj.keys())
-
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(data)
-
-        os.remove(f"{start}-{end}.jsonl")
-        print(f"File saved successfully in {start}-{end}.csv")
+def search_ids(search_type):
+    if search_type == 1:
+        id_num = input("Enter the ID you want to search for: ")
+        start_id = int(id_num)
+        end_id = int(id_num) + 1
+        file_name = f"{id_num}"
+    elif search_type == 2:
+        start_id = int(input("Enter the starting ID for the range: "))
+        end_id = int(input("Enter the ending ID for the range: "))
+        file_name = f"{start_id}-{end_id}"
     else:
-        os.remove(f"{start}-{end}.jsonl")
+        print("Invalid input")
+        return
+
+    with multiprocessing.Pool() as pool:
+        with SESSION as session, \
+             jsonlines.open(f"{file_name}.jsonl", mode="w") as writer:
+            # Set session object for each worker process
+            pool.map_async(session.mount, [URL]*len(pool._pool))
+
+            # Use imap_unordered to process results as soon as they become available
+            for result in pool.imap_unordered(send_request, range(start_id, end_id)):
+                if result is not None:
+                    writer.write(json.loads(result))
+
+    save_file = input("Save to file? (y/n): ")
+    if save_file.lower() == "y":
+        with open(f"{file_name}.csv", "w", newline="", encoding="utf-8") as f, \
+            jsonlines.open(f"{file_name}.jsonl", "r") as reader:
+            data = list(reader)
+            fieldnames = set()
+            for obj in data:
+                fieldnames.update(obj.keys())
+
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data)
+
+        os.remove(f"{file_name}.jsonl")
+        print(f"File saved successfully in {file_name}.csv")
+    else:
+        os.remove(f"{file_name}.jsonl")
 
     exit_program = input("Exit program? (y/n): ")
     if exit_program.lower() == "y":
@@ -102,7 +77,6 @@ def search_id_range():
         exit()
 
 def main():
-    # print(text2art("Mooshyab 7", font="small"))
     title = "Mooshyab 7"
     ascii_title = text2art(title, font='small', chr_ignore=True)
     colored_title = colored(ascii_title, 'cyan', attrs=['bold', 'underline'])
@@ -116,15 +90,14 @@ def main():
 
         choice = input("\nEnter your choice: ")
         if choice == "1":
-            search_single_id()
+            search_ids(1)
         elif choice == "2":
-            search_id_range()
+            search_ids(2)
         elif choice == "3":
             print("Exiting ID Searcher...")
             break
         else:
             print("Invalid choice, please try again.")
-
 
 if __name__ == "__main__":
     main()
