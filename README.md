@@ -44,13 +44,11 @@ _For more information, please refer to the [Documentation](https://t.me/c/116272
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Optimize TCP Connection
-- [x] Cocurrent TCP Connection
-- [ ] Improve CLI
-- [ ] Create GUI
-    - [ ] Farsi
-    - [ ] فارسی
-
+- [x] Optimize code
+- [x] Optimize speed
+- [x] Cocurrent requests 
+- [ ] Fix bugs
+- [ ] Add more features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
